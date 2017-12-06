@@ -1,7 +1,6 @@
 package service
 
 import (
-	// "context"
 	"context"
 	"reflect"
 	"testing"
@@ -11,22 +10,7 @@ import (
 
 var s = NewService()
 
-// func TestNewService(t *testing.T) {
-// 	tests := []struct {
-// 		name string
-// 		want Service
-// 	}{
-// 		{"new-service", *s},
-// 	}
-// 	for _, tt := range tests {
-// 		t.Run(tt.name, func(t *testing.T) {
-// 			if got := NewService(); !reflect.DeepEqual(got, tt.want) {
-// 				t.Errorf("NewService() = %v, want %v", got, tt.want)
-// 			}
-// 		})
-// 	}
-// }
-
+//TODO use the storeType interface signature to create a mockStore for testing
 func TestService_List(t *testing.T) {
 	type fields struct {
 		Store store.StoreType
