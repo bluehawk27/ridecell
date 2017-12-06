@@ -6,7 +6,7 @@ type ParkingSpot struct {
 	Available  bool     `json:"available" db:"available"`
 	Latitude   *float64 `json:"latitude" db:"lat"`
 	Longitude  *float64 `json:"longitude" db:"long"`
-	ReservedAt *bool    `json:"reserved_at" db:"reservedAt"`
+	ReservedAt *string  `json:"reserved_at" db:"reservedAt"`
 	Price      *float64 `json:"price" db:"price"`
 	StartTime  *string  `json:"start_time" db:"startTime"`
 	EndTime    *string  `json:"end_time" db:"endTime"`

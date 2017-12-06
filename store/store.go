@@ -54,8 +54,6 @@ func (s *Store) GetAllSpotsInRadius(ctx context.Context, p Point) (*[]ParkingSpo
 	whereStr := fmt.Sprintf("WHERE acos(%s + %s) * %f <= %f", lat1, lng1, float64(EarthRadius), p.Radius)
 	query := fmt.Sprintf("%s %s", selectSpot, whereStr)
 
-	fmt.Println("Query :", query)
-
 	if err := s.db.Select(&ps, query); err != nil {
 		return nil, err
 	}

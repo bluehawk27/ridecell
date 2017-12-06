@@ -3,3 +3,7 @@ BASEDIR=$(shell pwd)
 
 test:
 	go test --cover -v $(TESTDIRS)
+
+start: 
+	go install
+	ridecell
